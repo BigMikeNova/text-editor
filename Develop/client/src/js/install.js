@@ -62,4 +62,7 @@ butInstall.addEventListener('click', async () => {
   
 
 // TODO: Add an handler for the `appinstalled` event
-window.addEventListener('appinstalled', (event) => {});
+window.addEventListener('appinstalled', (event) => {
+    // Log the installation to analytics or save the event somehow
+    console.log('App installed', event);
+});
