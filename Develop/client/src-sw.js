@@ -67,4 +67,4 @@ const apiCache = new CacheFirst({
   ],
 });
 
-registerRoute('https://api.jate.com/', apiCache);
+registerRoute(apiCache);
