@@ -1,3 +1,5 @@
+let deferredPrompt;
+
 const butInstall = document.getElementById('buttonInstall');
 
 // Logic for installing the PWA
@@ -7,7 +9,7 @@ window.addEventListener('beforeinstallprompt', (event) => {
     event.preventDefault();
     
     // Store the event for later use
-    const deferredPrompt = event;
+    deferredPrompt = event;
     
     // Update UI or show a custom install prompt
     // For example, you can display a button to trigger the installation
