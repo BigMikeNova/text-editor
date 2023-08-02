@@ -20,8 +20,8 @@ module.exports = () => {
         chunks: ['main'],
       }),
       new HtmlWebpackPlugin({
-        filename: 'install.html',
-        template: './src/install.html',
+        filename: 'install.js',
+        template: './src/install.js',
         chunks: ['install'],
       }),
       new WebpackPwaManifest({
@@ -32,14 +32,14 @@ module.exports = () => {
         theme_color: '#000000',
         icons: [
           {
-            src: path.resolve('src/assets/icon.png'),
+            src: path.resolve('./src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
           },
         ],
       }),
       new InjectManifest({
-        swSrc: './src/sw.js',
+        swSrc: './src-sw.js',
         swDest: 'sw.js',
       }),
     ],

@@ -1,5 +1,3 @@
-let deferredPrompt;
-
 const butInstall = document.getElementById('buttonInstall');
 
 // Logic for installing the PWA
@@ -9,7 +7,7 @@ window.addEventListener('beforeinstallprompt', (event) => {
     event.preventDefault();
     
     // Store the event for later use
-    deferredPrompt = event;
+    const deferredPrompt = event;
     
     // Update UI or show a custom install prompt
     // For example, you can display a button to trigger the installation
@@ -65,6 +63,6 @@ butInstall.addEventListener('click', async () => {
 
 // TODO: Add an handler for the `appinstalled` event
 window.addEventListener('appinstalled', (event) => {
-    // Log the installation to analytics or save the event somehow
+      // Log the installation to analytics or save the event somehow
     console.log('App installed', event);
 });
