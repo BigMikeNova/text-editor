@@ -11,11 +11,12 @@ window.addEventListener('beforeinstallprompt', (event) => {
     
     // Update UI or show a custom install prompt
     // For example, you can display a button to trigger the installation
-    const installButton = document.getElementById('installButton');
+    const installButton = document.getElementById('buttonInstall');
     installButton.style.display = 'block';
     
     // Handle the button click to trigger the installation
     installButton.addEventListener('click', async () => {
+      console.log("HIT LINE 19")
       // Show the installation prompt
       deferredPrompt.prompt();
       

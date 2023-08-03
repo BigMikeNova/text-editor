@@ -54,17 +54,17 @@ const imagesCache = new CacheFirst({
 
 registerRoute(({ request }) => request.destination === 'image', imagesCache);
 
-// Cache API responses using CacheFirst strategy
-const apiCache = new CacheFirst({
-  cacheName: 'api-cache',
-  plugins: [
-    new CacheableResponsePlugin({
-      statuses: [0, 200],
-    }),
-    new ExpirationPlugin({
-      maxAgeSeconds: 5 * 60, // Cache for 5 minutes
-    }),
-  ],
-});
+// // Cache API responses using CacheFirst strategy
+// const apiCache = new CacheFirst({
+//   cacheName: 'api-cache',
+//   plugins: [
+//     new CacheableResponsePlugin({
+//       statuses: [0, 200],
+//     }),
+//     new ExpirationPlugin({
+//       maxAgeSeconds: 5 * 60, // Cache for 5 minutes
+//     }),
+//   ],
+// });
 
-registerRoute(apiCache);
+// registerRoute(apiCache);
