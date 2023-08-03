@@ -19,11 +19,11 @@ module.exports = () => {
         template: './src/index.html',
         chunks: ['main'],
       }),
-      new HtmlWebpackPlugin({
-        filename: 'install.js',
-        template: './src/install.js',
-        chunks: ['install'],
-      }),
+      // new HtmlWebpackPlugin({
+      //   filename: 'install.js',
+      //   template: './src/js/install.js',
+      //   chunks: ['install'],
+      // }),
       new WebpackPwaManifest({
         name: 'My App',
         short_name: 'App',
@@ -40,7 +40,7 @@ module.exports = () => {
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: 'sw.js',
+        swDest: 'src-sw.js',
       }),
     ],
 
